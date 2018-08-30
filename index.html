@@ -87,7 +87,7 @@
                     </section>
                 </section>
                 <section>
-                    <section><h1>Find<b>Us</b></h1></section>
+                    <section>Alexa, open <h1>Find<b>Us</b></h1></section>
                     <section>
                         <h3>Find<b>Us</b></h3>
                         <ul>
@@ -130,6 +130,59 @@
                         <h2>Find<b>Us</b>: Demonstration</h2>
                     </section>
                 </section>
+                <section>
+                    <section>
+                        Alexa, open <h1>Ruf<b>Us</b></h1>
+                    </section>
+                    <section>
+                        <h3>Ruf<b>Us</b>: Funktionalität</h3>
+                        <ul>
+                            <li class="fragment highlight-green"><b>Idee:</b> Simpler Audiomixer für Alexa</li>
+                            <li class="fragment highlight-green">Verarbeitung und Wiedergabe mehrerer Audiospuren</li>
+                            <li class="fragment highlight-blue">Hinzufügen / Entfernen von Audiospuren während der Laufzeit einer Datei</li>
+                            <li class="fragment highlight-red">Schnelle, fließende Interaktion mit Alexa</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h3>Ruf<b>Us</b>: Problemstellung</h3>
+                        <ul>
+                            <li class="fragment highlight-blue">Alexas limitierte Audioausgabe für mehrere Audiospuren ausreizen</li>
+                            <li class="fragment highlight-green">Möglichkeiten finden mit der aktuellen Audiowiedergabe-Sitzung dynamisch zu interagieren</li>
+                            <li class="fragment fade-out">Java-Frameworks für Audioverarbeitung mit Alexa verbinden</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h3>Ruf<b>Us</b>: Limitierungen (Audiowiedergabe)</h3>
+                            <ul class="fragment">
+                            	<li>Feste Abtastrate von 16000 Hz</li>
+                            	<li>Bitrate von 48 kb/s</li>
+                            	<li>Verwendung von MPEG Version 2 (libmp3lame-Codec)</li>
+                            	<li>Audiodateien müssen sich auf einem SSL-verschlüsselten, extern zugänglichen Server befinden</li>
+                            </ul>
+                    </section>
+                    <section>
+                    <h3>Ruf<b>Us</b>: Limitierungen (Audioverarbeitung)</h3>
+                            <ul class="fragment">
+                            	<li>Externes Backend-Modul zwingend notwendig</li>
+                            	<li>Externer Mischvorgang erzwingt die Interaktion über HTTP-Requests</li>
+                            	<li>Massives Timeout-Problem bei längeren Mischvorgängen</li>
+                            </ul>
+                    </section>
+                    <section>
+                        <h3>Ruf<b>Us</b>: Umsetzung</h3>
+                        <ul class="fragment">
+                        	<li>Alexa-Agent nimmt Aktion und Spur vom Nutzer auf</li>
+                            <li>HTTP-Request an eine Flask REST-API auf einem SSL verschlüsselten Server</li>
+                            <li>Python-Backend mischt die Spuren je nach Request-Methode</li>
+                            <li>Alexa fragt nach erfolgreicher Übermittlung die Abgelegte Datei ab und spielt sie ab</li>
+                        </ul>
+                    </section>
+                    <section>
+                    	<h1>Demonstration</h1>
+                    </section>
+                </section>
+                
+                
 			</div>
 		</div>
 
